@@ -36,7 +36,7 @@ func main() {
 	srv.Init()
 
 	// 注册处理器
-	pb.RegisterUserServiceHandler(srv.Server(), &handler.UserService{Repo: repo})
+	pb.RegisterUserServiceHandler(srv.Server(), &handler.UserService{repo})
 
 	// 启动用户服务
 	if err := srv.Run(); err != nil {

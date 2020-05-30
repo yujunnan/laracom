@@ -1,4 +1,4 @@
-module laracom
+module github.com/yujunnan/laracom
 
 go 1.13
 
