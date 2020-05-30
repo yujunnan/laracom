@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"log"
 	"github.com/micro/go-micro"
-	database "github.com/nonfu/laracom/user-service/db"
-	pb "github.com/nonfu/laracom/user-service/proto/user"
-	repository "github.com/nonfu/laracom/user-service/repo"
-	"github.com/nonfu/laracom/user-service/handler"
+	database "github.com/yujunnan/laracom/user-service/db"
+	pb "github.com/yujunnan/laracom/user-service/proto/user"
+	repository "github.com/yujunnan/laracom/user-service/repo"
+	"github.com/yujunnan/laracom/user-service/handler"
 )
 
 func main() {

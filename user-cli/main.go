@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/micro/cli"
 	"github.com/micro/go-micro"
-	pb "github.com/nonfu/laracom/user-service/proto/user"
+	pb "github.com/yujunnan/laracom/user-service/proto/user"
 	"golang.org/x/net/context"
 	"log"
 	"os"
