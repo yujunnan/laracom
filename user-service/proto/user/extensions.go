@@ -1,4 +1,4 @@
-package laracom_user_service
+package user
 
 import (
 	"fmt"
