@@ -7,6 +7,7 @@ import (
 	"golang.org/x/net/context"
 	"github.com/yujunnan/laracom/user-service/service"
 	"errors"
+	"log"
 )
 
 type UserService struct {

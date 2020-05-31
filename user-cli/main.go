@@ -2,7 +2,6 @@ package main
 
 import (
 	"github.com/micro/cli"
-	"github.com/micro/go-micro"
 	pb "github.com/yujunnan/laracom/user-service/proto/user"
 	"golang.org/x/net/context"
 	"log"
@@ -59,7 +58,29 @@ func main()  {
 			for _, v := range getAll.Users {
 				log.Println(v)
 			}
+			// 调用用户认证服务
+			var token *pb.Token
+			token, err = client.Auth(context.TODO(), &pb.User{
+				Email: email,
+				Password: password,
+			})
+			if err != nil {
+				log.Fatalf("用户登录失败: %v", err)
+			}
+			log.Printf("用户登录成功：%s", token.Token)
+
+			// 调用用户验证服务
+			token, err = client.ValidateToken(context.TODO(), token)
+			if err != nil {
+				log.Fatalf("用户认证失败: %v", err)
+			}
+			log.Printf("用户认证成功：%s", token.Valid)
+
 			os.Exit(0)
+
+
+
+
 		}),
 	)
 
