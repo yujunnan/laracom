@@ -1,4 +1,4 @@
-module user
+module laracom/user-service/proto/user
 
 go 1.13
 
