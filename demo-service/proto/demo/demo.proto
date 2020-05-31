@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package demo;
 option go_package = "proto/demo";
-
 service DemoService {
   rpc SayHello(DemoRequest) returns (DemoResponse) {}
 }

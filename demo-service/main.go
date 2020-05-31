@@ -11,10 +11,6 @@ type DemoServiceHandler struct {
 
 }
 
-func (s *DemoServiceHandler) SayHelloByUserId(context.Context, *pb.HelloRequest, *pb.DemoResponse) error {
-	panic("implement me")
-}
-
 func (s *DemoServiceHandler) SayHello(ctx context.Context, req *pb.DemoRequest, rsp *pb.DemoResponse) error {
 	rsp.Text = "你好, " + req.Name
 	return nil
