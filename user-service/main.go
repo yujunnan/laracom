@@ -8,6 +8,7 @@ import (
 	pb "github.com/yujunnan/laracom/user-service/proto/user"
 	repository "github.com/yujunnan/laracom/user-service/repo"
 	"github.com/yujunnan/laracom/user-service/handler"
+	"github.com/yujunnan/laracom/user-service/service"
 )
 
 func main() {
@@ -26,17 +27,19 @@ func main() {
 
 	// 初始化 Repo 实例用于后续数据库操作
 	repo := &repository.UserRepository{db}
-
+	// 初始化 token service
+	token := &service.TokenService{repo}
 	// 以下是 Micro 创建微服务流程
 	srv := micro.NewService(
 		micro.Name("laracom.user.service"),
 		micro.Version("latest"),  // 新增接口版本参数
 	)
+
 	srv.Init()
 
 	// 注册处理器
 	//noinspection ALL
-	pb.RegisterUserServiceHandler(srv.Server(), &handler.UserService{Repo:repo})
+	pb.RegisterUserServiceHandler(srv.Server(), &handler.UserService{Repo:repo,Token:token})
 
 	// 启动用户服务
 	if err := srv.Run(); err != nil {

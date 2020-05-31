@@ -12,8 +12,10 @@ require (
 
 replace github.com/yujunnan/laracom/user-service => ./
 
-replace github.com/yujunnan/laracom/user-service/handler => ./handler
-
 replace github.com/yujunnan/laracom/user-service/proto/user => ./proto/user
 
 replace github.com/yujunnan/laracom/user-service/db => ./db
+
+replace github.com/yujunnan/laracom/user-service/handler => ./handler
+
+replace github.com/yujunnan/laracom/user-service/service => ./service
