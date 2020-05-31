@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+//noinspection ALL
 func StartWebServer(port string) {
 	log.Println("Starting HTTP service at port " + port)
 	router := NewRouter()

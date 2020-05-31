@@ -16,7 +16,7 @@ func main()  {
 		micro.Flags(
 			cli.StringFlag{
 				Name: "name",
-				Usage: "Your Name",
+				Usagedb: "Your Name",
 			},
 			cli.StringFlag{
 				Name: "email",

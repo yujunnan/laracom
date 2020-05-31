@@ -11,8 +11,8 @@ type UserService struct {
 	Repo repo.Repository
 }
 
-func (srv *UserService) Get(ctx context.Context, res *pb.Response, req *pb.User) error {
-	var user, err = srv.Repo.Get(req.Id)
+func (srv *UserService) Get(ctx context.Context, req *pb.User, res *pb.Response) error {
+	user, err := srv.Repo.Get(req.Id)
 	if err != nil {
 		return err
 	}

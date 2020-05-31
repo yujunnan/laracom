@@ -12,7 +12,7 @@ import (
 
 func main() {
 
-
+	fmt.Println(1);
 	// 创建数据库连接，程序退出时断开连接
 	db, err := database.CreateConnection()
 	defer db.Close()
@@ -36,7 +36,8 @@ func main() {
 	srv.Init()
 
 	// 注册处理器
-	pb.RegisterUserServiceHandler(srv.Server(), &handler.UserService{repo})
+	//noinspection ALL
+	pb.RegisterUserServiceHandler(srv.Server(), &handler.UserService{Repo:repo})
 
 	// 启动用户服务
 	if err := srv.Run(); err != nil {
