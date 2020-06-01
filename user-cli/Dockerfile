@@ -1,5 +1,3 @@
-
-
 FROM golang:1.13-alpine as builder
 
 ENV GO111MODULE on
@@ -8,6 +6,8 @@ ENV GOPROXY https://goproxy.cn
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 RUN apk --no-cache add git
+
+
 
 WORKDIR /app/laracom-user-cli
 

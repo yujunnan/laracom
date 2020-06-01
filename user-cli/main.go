@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/micro/cli"
+	"github.com/micro/go-micro"
 	pb "github.com/yujunnan/laracom/user-service/proto/user"
 	"golang.org/x/net/context"
 	"log"
@@ -15,7 +16,7 @@ func main()  {
 		micro.Flags(
 			cli.StringFlag{
 				Name: "name",
-				Usagedb: "Your Name",
+				Usage: "Your Name",
 			},
 			cli.StringFlag{
 				Name: "email",
@@ -58,7 +59,6 @@ func main()  {
 			for _, v := range getAll.Users {
 				log.Println(v)
 			}
-			// 调用用户认证服务
 			var token *pb.Token
 			token, err = client.Auth(context.TODO(), &pb.User{
 				Email: email,
@@ -76,11 +76,8 @@ func main()  {
 			}
 			log.Printf("用户认证成功：%s", token.Valid)
 
+
 			os.Exit(0)
-
-
-
-
 		}),
 	)
 
