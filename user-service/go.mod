@@ -1,16 +1,8 @@
-module laracom/user-service
+module github.com/yujunnan/laracom/user-service
 
 go 1.13
 
-replace github.com/yujunnan/laracom/user-service/proto/user => ./proto/user
 
-replace github.com/yujunnan/laracom/user-service/db => ./db
-
-replace github.com/yujunnan/laracom/user-service/handler => ./handler
-
-replace github.com/yujunnan/laracom/user-service/service => ./service
-
-replace github.com/yujunnan/laracom/user-service/repo => ./repo
 
 require (
 	github.com/micro/go-micro v1.18.0
