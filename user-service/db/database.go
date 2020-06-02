@@ -21,5 +21,5 @@ func CreateConnection() (*gorm.DB, error) {
 			"%s:%s@tcp(%s)/%s?charset=utf8&parseTime=True&loc=Local",
 			user, password, host, DBName,
 		),
-	), nil
+	)
 }

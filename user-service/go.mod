@@ -2,13 +2,12 @@ module github.com/yujunnan/laracom/user-service
 
 go 1.13
 
-
-
 require (
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
+	github.com/golang/protobuf v1.4.2
+	github.com/jinzhu/gorm v1.9.12
 	github.com/micro/go-micro v1.18.0
-	github.com/yujunnan/laracom/user-service/db v0.0.0-00010101000000-000000000000
-	github.com/yujunnan/laracom/user-service/handler v0.0.0-00010101000000-000000000000
-	github.com/yujunnan/laracom/user-service/proto/user v0.0.0-20200530131054-29205d389e0d
-	github.com/yujunnan/laracom/user-service/repo v0.0.0-00010101000000-000000000000
-	github.com/yujunnan/laracom/user-service/service v0.0.0-00010101000000-000000000000
+	github.com/satori/go.uuid v1.2.0
+	golang.org/x/crypto v0.0.0-20200510223506-06a226fb4e37
+	golang.org/x/net v0.0.0-20200602114024-627f9648deb9
 )
