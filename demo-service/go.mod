@@ -1,4 +1,4 @@
-module laracom/demo-service
+module github.com/yujunnan/laracom/demo-service
 
 go 1.13
 
@@ -8,4 +8,3 @@ require (
 	github.com/yujunnan/laracom/demo-service/proto/demo v0.0.0-20200530131054-29205d389e0d
 )
 
-replace github.com/yujunnan/laracom/demo-service/proto/demo => ./proto/demo
