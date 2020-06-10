@@ -1,9 +1,10 @@
-package laracom_user_service
+package laracom_service_user
 
 import (
 	"fmt"
+
 	"github.com/jinzhu/gorm"
-	"github.com/satori/go.uuid"
+	uuid "github.com/satori/go.uuid"
 )
 
 //BeforeCreate
